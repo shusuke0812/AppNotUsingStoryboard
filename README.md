@@ -7,7 +7,7 @@
 - 開発ターゲット iOS 14.0
 
 ## 概要
-- 本アプリは [ios-engineer-codecheck](https://github.com/shusuke0812/ios-engineer-codecheck) を元にStoryboardを使わずにコードのみでViewを作成したアプリである
+- 本アプリは [ios-engineer-codecheck](https://github.com/shusuke0812/ios-engineer-codecheck) を元にStoryboardを使わずにコードのみでViewを作成したアプリである（GitHubRepositorySearchディレクトリ）
 - UIKitを使用している
 
 ## UI概要
