@@ -8,9 +8,12 @@
 import UIKit
 
 class TopViewController: UIViewController {
-
+    /// BaseView
+    private var baseView = TopBaseView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view = self.baseView
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C95F31626381A5200D523AC /* TopBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C95F31526381A5200D523AC /* TopBaseView.swift */; };
 		9C9CA46D2636FC9600E1D80C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9CA46C2636FC9600E1D80C /* AppDelegate.swift */; };
 		9C9CA46F2636FC9600E1D80C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9CA46E2636FC9600E1D80C /* SceneDelegate.swift */; };
 		9C9CA4712636FC9600E1D80C /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9CA4702636FC9600E1D80C /* TopViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C95F31526381A5200D523AC /* TopBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBaseView.swift; sourceTree = "<group>"; };
 		9C9CA4692636FC9600E1D80C /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C9CA46C2636FC9600E1D80C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C9CA46E2636FC9600E1D80C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		9C95F31426381A4100D523AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C95F31526381A5200D523AC /* TopBaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9C9CA4602636FC9600E1D80C = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		9C9CA46B2636FC9600E1D80C /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				9C95F31426381A4100D523AC /* View */,
 				9C95F307263813C100D523AC /* ViewController */,
 				9C9CA46C2636FC9600E1D80C /* AppDelegate.swift */,
 				9C9CA46E2636FC9600E1D80C /* SceneDelegate.swift */,
@@ -263,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C9CA4712636FC9600E1D80C /* TopViewController.swift in Sources */,
+				9C95F31626381A5200D523AC /* TopBaseView.swift in Sources */,
 				9C9CA46D2636FC9600E1D80C /* AppDelegate.swift in Sources */,
 				9C9CA46F2636FC9600E1D80C /* SceneDelegate.swift in Sources */,
 			);
