@@ -36,10 +36,14 @@ class TopBaseView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        // UI初期設定
         self.configuredBasic()
+        self.setNextButton()
+        
+        // UIをSuperViewに追加
         self.addSubViews()
         
+        // AutoLayout
         self.setLayoutConstraint()
     }
     required init?(coder: NSCoder) {
@@ -64,13 +68,23 @@ extension TopBaseView {
 }
 // MARK: - Initialization SubView Method
 extension TopBaseView {
-    /// タイトルラベル設定
+    /// AutoLayout設定
     private func setLayoutConstraint() {
         NSLayoutConstraint.activate([
+            // タイトルラベル
             self.titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0),
             self.titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 0),
+            // 次に進むボタン
             self.nextButton.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 10),
-            self.nextButton.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+            self.nextButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.nextButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.nextButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.nextButton.heightAnchor.constraint(equalToConstant: 45.0)
         ])
+    }
+    /// 次に進むボタンの設定
+    private func setNextButton() {
+        self.nextButton.clipsToBounds = true
+        self.nextButton.layer.cornerRadius = 5
     }
 }
