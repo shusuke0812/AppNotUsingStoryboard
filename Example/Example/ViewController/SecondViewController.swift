@@ -11,8 +11,11 @@ class SecondViewController: UIViewController {
     /// BaseView
     private var baseView = SecondBaseView()
 
+    // MARK: - Lifecycle Method
+    override func loadView() {
+        self.view = self.baseView
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view = self.baseView
     }
 }

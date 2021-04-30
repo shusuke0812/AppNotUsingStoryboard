@@ -11,9 +11,12 @@ class TopViewController: UIViewController {
     /// BaseView
     private var baseView = TopBaseView()
     
+    // MARK: - Lifecycle Method
+    override func loadView() {
+        self.view = self.baseView
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view = self.baseView
         self.setDelegate()
     }
 }
