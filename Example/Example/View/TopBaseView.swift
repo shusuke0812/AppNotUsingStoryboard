@@ -38,7 +38,6 @@ class TopBaseView: UIView {
         super.init(frame: frame)
         // UI初期設定
         self.configuredBasic()
-        self.setNextButton()
         
         // UIをSuperViewに追加
         self.addSubViews()
@@ -48,6 +47,9 @@ class TopBaseView: UIView {
     }
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    override func layoutSubviews() {
+        self.setNextButton()
     }
     // MARK: - Action Method
     @objc func didTapNextButton(_ sender: UIButton) {
