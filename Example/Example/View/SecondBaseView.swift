@@ -35,7 +35,7 @@ class SecondBaseView: UIView {
 extension SecondBaseView {
     // 基本設定
     private func configuredBasic() {
-        self.backgroundColor = .red
+        self.backgroundColor = .white
     }
     // UIパーツの追加
     private func addSubViews() {
