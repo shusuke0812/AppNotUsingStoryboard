@@ -15,6 +15,12 @@ class SecondBaseView: UIView {
         searchBarTemp.translatesAutoresizingMaskIntoConstraints = false
         return searchBarTemp
     }()
+    /// 記事リストテーブル
+    var tableView: UITableView = {
+        let tableViewTemp = UITableView()
+        tableViewTemp.translatesAutoresizingMaskIntoConstraints = false
+        return tableViewTemp
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,6 +46,7 @@ extension SecondBaseView {
     // UIパーツの追加
     private func addSubViews() {
         self.addSubview(self.searchBar)
+        self.addSubview(self.tableView)
     }
 }
 // MARK: - Initialization SubView Method
@@ -49,7 +56,12 @@ extension SecondBaseView {
             // 検索バー
             self.searchBar.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
             self.searchBar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
-            self.searchBar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0)
+            self.searchBar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+            /// 記事リストテーブル
+            self.tableView.topAnchor.constraint(equalTo: self.searchBar.bottomAnchor, constant: 0),
+            self.tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
+            self.tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+            self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
         ])
     }
 }
