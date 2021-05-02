@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C95369A263EC3AC00F0E350 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C953699263EC3AC00F0E350 /* UIViewController+Extension.swift */; };
 		9C95F31626381A5200D523AC /* TopBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C95F31526381A5200D523AC /* TopBaseView.swift */; };
 		9C95F3212638428D00D523AC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C95F3202638428D00D523AC /* SecondViewController.swift */; };
 		9C95F326263843C400D523AC /* SecondBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C95F325263843C400D523AC /* SecondBaseView.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C953699263EC3AC00F0E350 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		9C95F31526381A5200D523AC /* TopBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBaseView.swift; sourceTree = "<group>"; };
 		9C95F3202638428D00D523AC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		9C95F325263843C400D523AC /* SecondBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondBaseView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C953698263EC35000F0E350 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9C953699263EC3AC00F0E350 /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		9C95F307263813C100D523AC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,7 @@
 		9C9CA46B2636FC9600E1D80C /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				9C953698263EC35000F0E350 /* Extension */,
 				9C95F31426381A4100D523AC /* View */,
 				9C95F307263813C100D523AC /* ViewController */,
 				9C9CA46C2636FC9600E1D80C /* AppDelegate.swift */,
@@ -283,6 +294,7 @@
 				9C95F31626381A5200D523AC /* TopBaseView.swift in Sources */,
 				9C9CA46D2636FC9600E1D80C /* AppDelegate.swift in Sources */,
 				9C95F326263843C400D523AC /* SecondBaseView.swift in Sources */,
+				9C95369A263EC3AC00F0E350 /* UIViewController+Extension.swift in Sources */,
 				9C95F3212638428D00D523AC /* SecondViewController.swift in Sources */,
 				9C9CA46F2636FC9600E1D80C /* SceneDelegate.swift in Sources */,
 			);
