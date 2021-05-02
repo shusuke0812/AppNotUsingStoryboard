@@ -9,7 +9,7 @@ import UIKit
 
 class SecondBaseView: UIView {
     /// 検索バー
-    private let searchBar: UISearchBar = {
+    var searchBar: UISearchBar = {
         let searchBarTemp = UISearchBar()
         searchBarTemp.placeholder = "記事を検索する"
         searchBarTemp.translatesAutoresizingMaskIntoConstraints = false
