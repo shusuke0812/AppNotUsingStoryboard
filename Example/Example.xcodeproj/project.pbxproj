@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C56A6682641848600A638CA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C56A6672641848600A638CA /* Common.swift */; };
 		9C95369A263EC3AC00F0E350 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C953699263EC3AC00F0E350 /* UIViewController+Extension.swift */; };
+		9C9536A9263EDAF400F0E350 /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9536A8263EDAF400F0E350 /* SecondViewModel.swift */; };
 		9C95F31626381A5200D523AC /* TopBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C95F31526381A5200D523AC /* TopBaseView.swift */; };
 		9C95F3212638428D00D523AC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C95F3202638428D00D523AC /* SecondViewController.swift */; };
 		9C95F326263843C400D523AC /* SecondBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C95F325263843C400D523AC /* SecondBaseView.swift */; };
@@ -38,7 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C56A6672641848600A638CA /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		9C953699263EC3AC00F0E350 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		9C9536A8263EDAF400F0E350 /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
 		9C95F31526381A5200D523AC /* TopBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBaseView.swift; sourceTree = "<group>"; };
 		9C95F3202638428D00D523AC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		9C95F325263843C400D523AC /* SecondBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondBaseView.swift; sourceTree = "<group>"; };
@@ -82,12 +86,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C56A6662641843400A638CA /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				9C56A6672641848600A638CA /* Common.swift */,
+			);
+			path = Static;
+			sourceTree = "<group>";
+		};
 		9C953698263EC35000F0E350 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				9C953699263EC3AC00F0E350 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		9C9536A7263EDAE000F0E350 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C9536A8263EDAF400F0E350 /* SecondViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9C95F307263813C100D523AC /* ViewController */ = {
@@ -131,6 +151,8 @@
 		9C9CA46B2636FC9600E1D80C /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				9C56A6662641843400A638CA /* Static */,
+				9C9536A7263EDAE000F0E350 /* ViewModel */,
 				9C953698263EC35000F0E350 /* Extension */,
 				9C95F31426381A4100D523AC /* View */,
 				9C95F307263813C100D523AC /* ViewController */,
@@ -290,9 +312,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C9536A9263EDAF400F0E350 /* SecondViewModel.swift in Sources */,
 				9C9CA4712636FC9600E1D80C /* TopViewController.swift in Sources */,
 				9C95F31626381A5200D523AC /* TopBaseView.swift in Sources */,
 				9C9CA46D2636FC9600E1D80C /* AppDelegate.swift in Sources */,
+				9C56A6682641848600A638CA /* Common.swift in Sources */,
 				9C95F326263843C400D523AC /* SecondBaseView.swift in Sources */,
 				9C95369A263EC3AC00F0E350 /* UIViewController+Extension.swift in Sources */,
 				9C95F3212638428D00D523AC /* SecondViewController.swift in Sources */,
