@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct Common {
+    static let tableViewCellIdentifier = "cell"
+}
