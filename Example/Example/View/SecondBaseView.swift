@@ -42,6 +42,7 @@ extension SecondBaseView {
     // 基本設定
     private func configuredBasic() {
         self.backgroundColor = .white
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: Common.tableViewCellIdentifier)
     }
     // UIパーツの追加
     private func addSubViews() {
