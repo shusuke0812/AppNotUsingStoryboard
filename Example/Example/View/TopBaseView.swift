@@ -15,6 +15,30 @@ class TopBaseView: UIView {
     /// デリゲート
     weak var delegate: TopBaseViewDelegate?
     
+    /// StackView
+    private let stackView: UIStackView = {
+        let stackViewTemp = UIStackView()
+        stackViewTemp.axis = .horizontal
+        stackViewTemp.distribution = .fillEqually
+        stackViewTemp.spacing = 5
+        stackViewTemp.translatesAutoresizingMaskIntoConstraints = false
+        return stackViewTemp
+    }()
+    /// StackView用のサンプルView 1
+    private let view1: UIView = {
+        let viewTemp = UIView()
+        viewTemp.backgroundColor = .green
+        viewTemp.translatesAutoresizingMaskIntoConstraints = false
+        return viewTemp
+    }()
+    /// StackView用のサンプルView 2
+    private let view2: UIView = {
+        let viewTemp = UIView()
+        viewTemp.backgroundColor = .blue
+        viewTemp.translatesAutoresizingMaskIntoConstraints = false
+        return viewTemp
+    }()
+    
     /// タイトルラベル
     private let titleLabel: UILabel = {
         let labelTemp = UILabel()
@@ -66,6 +90,9 @@ extension TopBaseView {
     private func addSubViews() {
         self.addSubview(self.titleLabel)
         self.addSubview(self.nextButton)
+        self.addSubview(self.stackView)
+        self.stackView.addArrangedSubview(self.view1)
+        self.stackView.addArrangedSubview(self.view2)
     }
 }
 // MARK: - Initialization SubView Method
@@ -81,7 +108,12 @@ extension TopBaseView {
             self.nextButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.nextButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             self.nextButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.nextButton.heightAnchor.constraint(equalToConstant: 45.0)
+            self.nextButton.heightAnchor.constraint(equalToConstant: 45.0),
+            // StackView
+            self.stackView.topAnchor.constraint(equalTo: self.nextButton.bottomAnchor, constant: 10),
+            self.stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.stackView.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
     /// 次に進むボタンの設定
