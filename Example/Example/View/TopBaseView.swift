@@ -54,6 +54,8 @@ class TopBaseView: UIView {
         buttonTemp.backgroundColor = .systemRed
         buttonTemp.setTitle("次に進む", for: .normal)
         buttonTemp.addTarget(self, action: #selector(didTapNextButton), for: .touchDown)
+        buttonTemp.clipsToBounds = true
+        buttonTemp.layer.cornerRadius = 5
         buttonTemp.translatesAutoresizingMaskIntoConstraints = false
         return buttonTemp
     }()
@@ -73,7 +75,6 @@ class TopBaseView: UIView {
         super.init(coder: coder)
     }
     override func layoutSubviews() {
-        self.setNextButton()
     }
     // MARK: - Action Method
     @objc func didTapNextButton(_ sender: UIButton) {
@@ -115,10 +116,5 @@ extension TopBaseView {
             self.stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.stackView.heightAnchor.constraint(equalToConstant: 40)
         ])
-    }
-    /// 次に進むボタンの設定
-    private func setNextButton() {
-        self.nextButton.clipsToBounds = true
-        self.nextButton.layer.cornerRadius = 5
     }
 }
