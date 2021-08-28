@@ -8,7 +8,7 @@
 import UIKit
 
 protocol TopBaseViewDelegate: AnyObject {
-    func didTapNextButton()
+    func didTappedNextButton()
     func didTappedConfigButton()
 }
 
@@ -63,7 +63,7 @@ class TopBaseView: UIView {
         let buttonTemp = UIButton()
         buttonTemp.backgroundColor = .systemRed
         buttonTemp.setTitle("次に進む", for: .normal)
-        buttonTemp.addTarget(self, action: #selector(didTapNextButton), for: .touchDown)
+        buttonTemp.addTarget(self, action: #selector(didTappedNextButton), for: .touchDown)
         buttonTemp.clipsToBounds = true
         buttonTemp.layer.cornerRadius = 5
         buttonTemp.translatesAutoresizingMaskIntoConstraints = false
@@ -87,8 +87,8 @@ class TopBaseView: UIView {
     override func layoutSubviews() {
     }
     // MARK: - Action
-    @objc func didTapNextButton(_ sender: UIButton) {
-        self.delegate?.didTapNextButton()
+    @objc func didTappedNextButton(_ sender: UIButton) {
+        self.delegate?.didTappedNextButton()
     }
     @objc private func didTappedConfigButton(_ sender: UIButton) {
         self.delegate?.didTappedConfigButton()
