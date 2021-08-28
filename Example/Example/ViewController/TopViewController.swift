@@ -32,4 +32,6 @@ extension TopViewController: TopBaseViewDelegate {
         let vc = SecondViewController()
         self.present(vc, animated: true, completion: nil)
     }
+    func didTappedConfigButton() {
+    }
 }
