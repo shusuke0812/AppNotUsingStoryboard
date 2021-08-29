@@ -11,7 +11,7 @@ class AppRootController: UIViewController {
 
     private var currentViewController: UIViewController?
     
-    // Lifecycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         showTopPage()
