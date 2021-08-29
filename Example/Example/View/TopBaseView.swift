@@ -9,21 +9,11 @@ import UIKit
 
 protocol TopBaseViewDelegate: AnyObject {
     func didTappedNextButton()
-    func didTappedConfigButton()
 }
 
 class TopBaseView: UIView {
     /// デリゲート
     weak var delegate: TopBaseViewDelegate?
-    
-    /// 設定ボタン
-    private let searchButton: UIButton = {
-        let btn = UIButton()
-        btn.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
-        btn.addTarget(self, action: #selector(didTappedConfigButton), for: .touchDown)
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        return btn
-    }()
     
     /// StackView
     private let stackView: UIStackView = {
@@ -90,9 +80,6 @@ class TopBaseView: UIView {
     @objc func didTappedNextButton(_ sender: UIButton) {
         self.delegate?.didTappedNextButton()
     }
-    @objc private func didTappedConfigButton(_ sender: UIButton) {
-        self.delegate?.didTappedConfigButton()
-    }
 }
 // MARK: - Initialized Basic Method
 extension TopBaseView {
@@ -105,7 +92,6 @@ extension TopBaseView {
         self.addSubview(self.titleLabel)
         self.addSubview(self.nextButton)
         self.addSubview(self.stackView)
-        self.addSubview(self.searchButton)
         self.stackView.addArrangedSubview(self.view1)
         self.stackView.addArrangedSubview(self.view2)
     }
@@ -129,9 +115,6 @@ extension TopBaseView {
             self.stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             self.stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.stackView.heightAnchor.constraint(equalToConstant: 40),
-            // 設定ボタン
-            self.searchButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 15),
-            self.searchButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -15)
         ])
     }
 }
