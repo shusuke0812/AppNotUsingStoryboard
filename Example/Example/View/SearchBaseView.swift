@@ -15,6 +15,13 @@ class SearchBaseView: UIView {
         searchBarTemp.translatesAutoresizingMaskIntoConstraints = false
         return searchBarTemp
     }()
+    // リスト
+    private let tableView: UITableView = {
+        let tableViewTemp = UITableView()
+        tableViewTemp.isHidden = true
+        tableViewTemp.translatesAutoresizingMaskIntoConstraints = false
+        return tableViewTemp
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,12 +46,19 @@ extension SearchBaseView {
     }
     private func addSubViews() {
         self.addSubview(self.searchBar)
+        self.addSubview(self.tableView)
     }
     private func setLayoutConstraint() {
         NSLayoutConstraint.activate([
+            // 検索バー
             self.searchBar.topAnchor.constraint(equalTo:  self.topAnchor, constant: 0),
             self.searchBar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
-            self.searchBar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0)
+            self.searchBar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+            // リスト
+            self.tableView.topAnchor.constraint(equalTo: self.searchBar.bottomAnchor, constant: 0),
+            self.tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
+            self.tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+            self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
         ])
     }
 }
