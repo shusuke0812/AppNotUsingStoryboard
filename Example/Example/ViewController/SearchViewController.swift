@@ -18,10 +18,16 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configNavigation()
     }
 }
 
 // MARK: - Initialized
 extension SearchViewController {
     private func configBaseView() {}
+    private func configNavigation() {
+        // Viewの上端をNavBar下端に合わせる
+        navigationController?.navigationBar.isTranslucent = false
+    }
 }
