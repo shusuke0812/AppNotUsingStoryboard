@@ -18,7 +18,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        baseView.configTableViewProtocol(delegate: self)
         configNavigation()
     }
 }
@@ -29,5 +29,22 @@ extension SearchViewController {
     private func configNavigation() {
         // Viewの上端をNavBar下端に合わせる
         navigationController?.navigationBar.isTranslucent = false
+    }
+}
+
+// MARK: - UITableView Delegate
+extension SearchViewController: UITableViewDelegate {
+    
+}
+
+// MARK: - UITableView DataSource
+extension SearchViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 30
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Common.tableViewCellIdentifier, for: indexPath)
+        cell.textLabel?.text = "test"
+        return cell
     }
 }

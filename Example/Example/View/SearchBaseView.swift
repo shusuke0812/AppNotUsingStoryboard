@@ -43,6 +43,7 @@ class SearchBaseView: UIView {
 extension SearchBaseView {
     private func configBasic() {
         self.backgroundColor = .white
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: Common.tableViewCellIdentifier)
     }
     private func addSubViews() {
         self.addSubview(self.searchBar)
@@ -60,5 +61,14 @@ extension SearchBaseView {
             self.tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
             self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
         ])
+    }
+}
+
+// MARK: - Setting
+extension SearchBaseView {
+    /// TableViewの`Delegate`, `DataSource`を設定する（MEMO：１つのクラスで左記プロトコルを継承する仕様になっているため、`DataSource`をViewModelで定義したい場合は引数を２つにした方が良いかも）
+    func configTableViewProtocol<T: UITableViewDelegate & UITableViewDataSource>(delegate: T) {
+        tableView.delegate = delegate
+        tableView.dataSource = delegate
     }
 }
