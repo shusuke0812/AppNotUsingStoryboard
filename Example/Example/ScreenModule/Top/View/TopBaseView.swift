@@ -9,6 +9,7 @@ import UIKit
 
 protocol TopBaseViewDelegate: AnyObject {
     func didTappedNextButton()
+    func didTappedHalfModalButton()
 }
 
 class TopBaseView: UIView {
@@ -59,6 +60,16 @@ class TopBaseView: UIView {
         buttonTemp.translatesAutoresizingMaskIntoConstraints = false
         return buttonTemp
     }()
+    /// Half Modal表示ボタン
+    private lazy var halfModalButton: UIButton = {
+        let buttonTemp = UIButton()
+        buttonTemp.backgroundColor = .systemGray
+        buttonTemp.setTitle("ハーフモーダル", for: .normal)
+        buttonTemp.setTitleColor(.white, for: .normal)
+        buttonTemp.addTarget(self, action: #selector(transitionHalfModal), for: .touchDown)
+        buttonTemp.translatesAutoresizingMaskIntoConstraints = false
+        return buttonTemp
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -80,6 +91,9 @@ class TopBaseView: UIView {
     @objc func didTappedNextButton(_ sender: UIButton) {
         self.delegate?.didTappedNextButton()
     }
+    @objc func transitionHalfModal(_ sender: UIButton) {
+        self.delegate?.didTappedHalfModalButton()
+    }
 }
 // MARK: - Initialized Basic Method
 extension TopBaseView {
@@ -92,6 +106,7 @@ extension TopBaseView {
         self.addSubview(self.titleLabel)
         self.addSubview(self.nextButton)
         self.addSubview(self.stackView)
+        self.addSubview(self.halfModalButton)
         self.stackView.addArrangedSubview(self.view1)
         self.stackView.addArrangedSubview(self.view2)
     }
@@ -104,8 +119,13 @@ extension TopBaseView {
             // タイトルラベル
             self.titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0),
             self.titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 0),
+            // ハーフモーダルボタン
+            self.halfModalButton.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 15),
+            self.halfModalButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.halfModalButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.halfModalButton.heightAnchor.constraint(equalToConstant: 45.0),
             // 次に進むボタン
-            self.nextButton.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 10),
+            self.nextButton.topAnchor.constraint(equalTo: self.halfModalButton.bottomAnchor, constant: 10),
             self.nextButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.nextButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             self.nextButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
