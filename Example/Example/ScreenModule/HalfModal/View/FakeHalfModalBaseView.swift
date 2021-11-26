@@ -47,6 +47,12 @@ class FakeHalfModalBaseView: UIView {
         tempView.translatesAutoresizingMaskIntoConstraints = false
         return tempView
     }()
+    /// フィルタセクション
+    private lazy var tableView: UITableView = {
+        let tableViewTemp = UITableView()
+        tableViewTemp.translatesAutoresizingMaskIntoConstraints = false
+        return tableViewTemp
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -74,6 +80,7 @@ extension FakeHalfModalBaseView {
     /// 基本設定
     private func configBasic() {
         backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Common.tableViewCellIdentifier)
     }
     /// UIパーツの追加
     private func addSubViews() {
@@ -81,6 +88,7 @@ extension FakeHalfModalBaseView {
         contentView.addSubview(titleLabel)
         contentView.addSubview(closeButton)
         contentView.addSubview(boarderLineView)
+        contentView.addSubview(tableView)
     }
     /// Autolayout
     private func setLayoutConstraint() {
@@ -101,6 +109,15 @@ extension FakeHalfModalBaseView {
             boarderLineView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             boarderLineView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             boarderLineView.heightAnchor.constraint(equalToConstant: 0.2),
+            
+            tableView.topAnchor.constraint(equalTo: boarderLineView.bottomAnchor, constant: 5),
+            tableView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
+    }
+    func registerTableViewProtocols(delegate: UITableViewDelegate? = nil, dataSource: UITableViewDataSource? = nil) {
+        tableView.delegate = delegate
+        tableView.dataSource = dataSource
     }
 }

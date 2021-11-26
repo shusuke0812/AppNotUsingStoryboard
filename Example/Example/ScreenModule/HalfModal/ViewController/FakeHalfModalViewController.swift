@@ -33,6 +33,7 @@ class FakeHalfModalViewController: UIViewController {
 extension FakeHalfModalViewController {
     private func setDelegate() {
         baseView.delegate = self
+        baseView.registerTableViewProtocols(delegate: self, dataSource: self)
     }
 }
 
@@ -40,5 +41,22 @@ extension FakeHalfModalViewController {
 extension FakeHalfModalViewController: FakeHalfModalBaseViewDelegate {
     func didTappedCloseButton() {
         presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK: - UITableView Delegate
+extension FakeHalfModalViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+}
+
+// MARK: - UITableiew DataSource
+extension FakeHalfModalViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Common.tableViewCellIdentifier, for: indexPath)
+        return cell
     }
 }
