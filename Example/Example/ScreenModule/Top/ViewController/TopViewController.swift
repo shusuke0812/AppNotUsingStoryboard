@@ -46,5 +46,8 @@ extension TopViewController: TopBaseViewDelegate {
         present(vc, animated: true, completion: nil)
     }
     func didTappedHalfModalButton() {
+        let vc = FakeHalfModalViewController()
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: true, completion: nil)
     }
 }

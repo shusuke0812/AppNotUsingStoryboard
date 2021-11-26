@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9C56A6682641848600A638CA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C56A6672641848600A638CA /* Common.swift */; };
+		9C7B2C9627510FB600DE68CB /* FakeHalfModalBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7B2C9527510FB600DE68CB /* FakeHalfModalBaseView.swift */; };
+		9C7B2C9827510FD100DE68CB /* FakeHalfModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7B2C9727510FD100DE68CB /* FakeHalfModalViewController.swift */; };
 		9C814D6426DA822100791A5F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C814D6326DA822100791A5F /* SearchViewController.swift */; };
 		9C814D6626DA823E00791A5F /* SearchBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C814D6526DA823E00791A5F /* SearchBaseView.swift */; };
 		9C95369A263EC3AC00F0E350 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C953699263EC3AC00F0E350 /* UIViewController+Extension.swift */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		9C56A6672641848600A638CA /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		9C7B2C9527510FB600DE68CB /* FakeHalfModalBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHalfModalBaseView.swift; sourceTree = "<group>"; };
+		9C7B2C9727510FD100DE68CB /* FakeHalfModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHalfModalViewController.swift; sourceTree = "<group>"; };
 		9C814D6326DA822100791A5F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9C814D6526DA823E00791A5F /* SearchBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBaseView.swift; sourceTree = "<group>"; };
 		9C953699263EC3AC00F0E350 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				9C7B2C882751068000DE68CB /* Top */,
 				9C7B2C8B275106AA00DE68CB /* Second */,
 				9C7B2C8F2751071E00DE68CB /* Search */,
+				9C7B2C9227510F6C00DE68CB /* HalfModal */,
 			);
 			path = ScreenModule;
 			sourceTree = "<group>";
@@ -192,6 +197,31 @@
 				9C814D6526DA823E00791A5F /* SearchBaseView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9C7B2C9227510F6C00DE68CB /* HalfModal */ = {
+			isa = PBXGroup;
+			children = (
+				9C7B2C9327510F7800DE68CB /* View */,
+				9C7B2C9427510F7D00DE68CB /* ViewController */,
+			);
+			path = HalfModal;
+			sourceTree = "<group>";
+		};
+		9C7B2C9327510F7800DE68CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C7B2C9527510FB600DE68CB /* FakeHalfModalBaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C7B2C9427510F7D00DE68CB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C7B2C9727510FD100DE68CB /* FakeHalfModalViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		9C953698263EC35000F0E350 /* Extension */ = {
@@ -394,6 +424,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C9536A9263EDAF400F0E350 /* SecondViewModel.swift in Sources */,
+				9C7B2C9627510FB600DE68CB /* FakeHalfModalBaseView.swift in Sources */,
+				9C7B2C9827510FD100DE68CB /* FakeHalfModalViewController.swift in Sources */,
 				9C814D6426DA822100791A5F /* SearchViewController.swift in Sources */,
 				9C99886926D9308B001CD5F6 /* AppRootController.swift in Sources */,
 				9C9CA4712636FC9600E1D80C /* TopViewController.swift in Sources */,
