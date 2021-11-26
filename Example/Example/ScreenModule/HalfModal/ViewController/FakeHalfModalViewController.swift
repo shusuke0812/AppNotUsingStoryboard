@@ -17,7 +17,21 @@ class FakeHalfModalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setDelegate()
+    }
+}
 
-        // Do any additional setup after loading the view.
+// MARK: -  Initialized
+extension FakeHalfModalViewController {
+    private func setDelegate() {
+        baseView.delegate = self
+    }
+}
+
+// MARK: - FakeHalfModal BaseView Delegate
+extension FakeHalfModalViewController: FakeHalfModalBaseViewDelegate {
+    func didTappedCloseButton() {
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }
