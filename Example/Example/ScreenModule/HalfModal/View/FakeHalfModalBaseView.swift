@@ -12,6 +12,8 @@ class FakeHalfModalBaseView: UIView {
     private lazy var contentView: UIView = {
         let tempView = UIView()
         tempView.backgroundColor = .white
+        tempView.layer.masksToBounds = true
+        tempView.layer.cornerRadius = 10
         tempView.translatesAutoresizingMaskIntoConstraints = false
         return tempView
     }()
