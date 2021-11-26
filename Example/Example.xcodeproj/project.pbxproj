@@ -100,15 +100,68 @@
 			path = Static;
 			sourceTree = "<group>";
 		};
-		9C953698263EC35000F0E350 /* Extension */ = {
+		9C7B2C872751066C00DE68CB /* ScreenModule */ = {
 			isa = PBXGroup;
 			children = (
-				9C953699263EC3AC00F0E350 /* UIViewController+Extension.swift */,
+				9C7B2C882751068000DE68CB /* Top */,
+				9C7B2C8B275106AA00DE68CB /* Second */,
+				9C7B2C8F2751071E00DE68CB /* Search */,
 			);
-			path = Extension;
+			path = ScreenModule;
 			sourceTree = "<group>";
 		};
-		9C9536A7263EDAE000F0E350 /* ViewModel */ = {
+		9C7B2C882751068000DE68CB /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				9C7B2C8A2751069000DE68CB /* View */,
+				9C7B2C892751068600DE68CB /* ViewController */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		9C7B2C892751068600DE68CB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C9CA4702636FC9600E1D80C /* TopViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9C7B2C8A2751069000DE68CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C95F31526381A5200D523AC /* TopBaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C7B2C8B275106AA00DE68CB /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				9C7B2C8E275106CF00DE68CB /* ViewModel */,
+				9C7B2C8D275106BC00DE68CB /* View */,
+				9C7B2C8C275106B400DE68CB /* ViewController */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		9C7B2C8C275106B400DE68CB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C95F3202638428D00D523AC /* SecondViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9C7B2C8D275106BC00DE68CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C95F325263843C400D523AC /* SecondBaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C7B2C8E275106CF00DE68CB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				9C9536A8263EDAF400F0E350 /* SecondViewModel.swift */,
@@ -116,24 +169,37 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		9C95F307263813C100D523AC /* ViewController */ = {
+		9C7B2C8F2751071E00DE68CB /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				9C9CA4702636FC9600E1D80C /* TopViewController.swift */,
-				9C95F3202638428D00D523AC /* SecondViewController.swift */,
+				9C7B2C912751073400DE68CB /* View */,
+				9C7B2C902751072D00DE68CB /* ViewController */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		9C7B2C902751072D00DE68CB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
 				9C814D6326DA822100791A5F /* SearchViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		9C95F31426381A4100D523AC /* View */ = {
+		9C7B2C912751073400DE68CB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9C95F31526381A5200D523AC /* TopBaseView.swift */,
-				9C95F325263843C400D523AC /* SecondBaseView.swift */,
 				9C814D6526DA823E00791A5F /* SearchBaseView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9C953698263EC35000F0E350 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9C953699263EC3AC00F0E350 /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		9C99886726D93006001CD5F6 /* App */ = {
@@ -170,10 +236,8 @@
 			children = (
 				9C99886726D93006001CD5F6 /* App */,
 				9C56A6662641843400A638CA /* Static */,
-				9C9536A7263EDAE000F0E350 /* ViewModel */,
+				9C7B2C872751066C00DE68CB /* ScreenModule */,
 				9C953698263EC35000F0E350 /* Extension */,
-				9C95F31426381A4100D523AC /* View */,
-				9C95F307263813C100D523AC /* ViewController */,
 				9C9CA46E2636FC9600E1D80C /* SceneDelegate.swift.org */,
 				9C9CA4752636FC9900E1D80C /* Assets.xcassets */,
 				9C9CA4772636FC9900E1D80C /* LaunchScreen.storyboard */,
