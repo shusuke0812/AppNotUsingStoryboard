@@ -74,13 +74,13 @@ class TopBaseView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         // UI初期設定
-        self.configuredBasic()
+        configuredBasic()
         
         // UIをSuperViewに追加
-        self.addSubViews()
+        addSubViews()
         
         // AutoLayout
-        self.setLayoutConstraint()
+        setLayoutConstraint()
     }
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -89,10 +89,10 @@ class TopBaseView: UIView {
     }
     // MARK: - Action
     @objc func didTappedNextButton(_ sender: UIButton) {
-        self.delegate?.didTappedNextButton()
+        delegate?.didTappedNextButton()
     }
     @objc func transitionHalfModal(_ sender: UIButton) {
-        self.delegate?.didTappedHalfModalButton()
+        delegate?.didTappedHalfModalButton()
     }
 }
 // MARK: - Initialized Basic Method
@@ -103,12 +103,12 @@ extension TopBaseView {
     }
     /// UIパーツの追加
     private func addSubViews() {
-        self.addSubview(self.titleLabel)
-        self.addSubview(self.nextButton)
-        self.addSubview(self.stackView)
-        self.addSubview(self.halfModalButton)
-        self.stackView.addArrangedSubview(self.view1)
-        self.stackView.addArrangedSubview(self.view2)
+        addSubview(self.titleLabel)
+        addSubview(self.nextButton)
+        addSubview(self.stackView)
+        addSubview(self.halfModalButton)
+        stackView.addArrangedSubview(self.view1)
+        stackView.addArrangedSubview(self.view2)
     }
 }
 // MARK: - Initialization SubView Method
@@ -117,24 +117,24 @@ extension TopBaseView {
     private func setLayoutConstraint() {
         NSLayoutConstraint.activate([
             // タイトルラベル
-            self.titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0),
-            self.titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 0),
+            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 0),
+            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0),
             // ハーフモーダルボタン
-            self.halfModalButton.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 15),
-            self.halfModalButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.halfModalButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.halfModalButton.heightAnchor.constraint(equalToConstant: 45.0),
+            halfModalButton.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
+            halfModalButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            halfModalButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            halfModalButton.heightAnchor.constraint(equalToConstant: 45.0),
             // 次に進むボタン
-            self.nextButton.topAnchor.constraint(equalTo: self.halfModalButton.bottomAnchor, constant: 10),
-            self.nextButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.nextButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.nextButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.nextButton.heightAnchor.constraint(equalToConstant: 45.0),
+            nextButton.topAnchor.constraint(equalTo: halfModalButton.bottomAnchor, constant: 10),
+            nextButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            nextButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            nextButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            nextButton.heightAnchor.constraint(equalToConstant: 45.0),
             // StackView
-            self.stackView.topAnchor.constraint(equalTo: self.nextButton.bottomAnchor, constant: 10),
-            self.stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.stackView.heightAnchor.constraint(equalToConstant: 40),
+            stackView.topAnchor.constraint(equalTo: nextButton.bottomAnchor, constant: 10),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            stackView.heightAnchor.constraint(equalToConstant: 40),
         ])
     }
 }

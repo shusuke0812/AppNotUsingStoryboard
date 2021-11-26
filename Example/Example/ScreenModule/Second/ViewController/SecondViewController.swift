@@ -15,15 +15,15 @@ class SecondViewController: UIViewController {
 
     // MARK: - Lifecycle Method
     override func loadView() {
-        self.view = self.baseView
+        view = baseView
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setDissmissKeyboard()
+        setDissmissKeyboard()
         // デリゲート登録
-        self.baseView.searchBar.delegate = self
-        self.baseView.tableView.delegate = self
-        self.baseView.tableView.dataSource = self.viewModel
+        baseView.searchBar.delegate = self
+        baseView.tableView.delegate = self
+        baseView.tableView.dataSource = self.viewModel
     }
 }
 // MARK: - SearchBar Delegate Method

@@ -25,13 +25,13 @@ class SecondBaseView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         // UI初期設定
-        self.configuredBasic()
+        configuredBasic()
         
         // UIをSuperVIewに追加
-        self.addSubViews()
+        addSubViews()
         
         // AutoLayout
-        self.setLayoutConstraint()
+        setLayoutConstraint()
     }
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -41,13 +41,13 @@ class SecondBaseView: UIView {
 extension SecondBaseView {
     // 基本設定
     private func configuredBasic() {
-        self.backgroundColor = .white
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: Common.tableViewCellIdentifier)
+        backgroundColor = .white
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Common.tableViewCellIdentifier)
     }
     // UIパーツの追加
     private func addSubViews() {
-        self.addSubview(self.searchBar)
-        self.addSubview(self.tableView)
+        addSubview(self.searchBar)
+        addSubview(self.tableView)
     }
 }
 // MARK: - Initialization SubView Method
@@ -55,14 +55,14 @@ extension SecondBaseView {
     private func setLayoutConstraint() {
         NSLayoutConstraint.activate([
             // 検索バー
-            self.searchBar.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
-            self.searchBar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
-            self.searchBar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+            searchBar.topAnchor.constraint(equalTo: topAnchor, constant: 0),
+            searchBar.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            searchBar.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
             /// 記事リストテーブル
-            self.tableView.topAnchor.constraint(equalTo: self.searchBar.bottomAnchor, constant: 0),
-            self.tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
-            self.tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
-            self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
+            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 0),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0)
         ])
     }
 }

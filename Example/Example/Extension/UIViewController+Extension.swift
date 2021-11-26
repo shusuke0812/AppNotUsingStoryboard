@@ -10,11 +10,11 @@ import UIKit
 extension UIViewController {
     /// キーボード以外の画面をタップした時にキーボードを閉じる処理
     internal func setDissmissKeyboard() {
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dissmissKeyboard))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dissmissKeyboard))
         tapGestureRecognizer.cancelsTouchesInView = true
-        self.view.addGestureRecognizer(tapGestureRecognizer)
+        view.addGestureRecognizer(tapGestureRecognizer)
     }
     @objc private func dissmissKeyboard() {
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
 }

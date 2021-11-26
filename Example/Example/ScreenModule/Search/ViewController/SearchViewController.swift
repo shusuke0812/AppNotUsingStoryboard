@@ -13,7 +13,7 @@ class SearchViewController: UIViewController {
     
     // MARK: - Lifecycle
     override func loadView() {
-        self.view = self.baseView
+        view = baseView
     }
     
     override func viewDidLoad() {

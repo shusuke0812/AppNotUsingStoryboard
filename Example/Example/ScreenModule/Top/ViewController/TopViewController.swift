@@ -13,37 +13,37 @@ class TopViewController: UIViewController {
     
     // MARK: - Lifecycle
     override func loadView() {
-        self.view = self.baseView
+        view = baseView
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setDelegate()
+        setDelegate()
         
-        self.setNavigation()
+        setNavigation()
     }
     
     // MARK: - Action
     @objc func didTappedSearchButton() {
         let vc = SearchViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 // MARK: - Initialized
 extension TopViewController {
     private func setDelegate() {
-        self.baseView.delegate = self
+        baseView.delegate = self
     }
     private func setNavigation() {
-        self.navigationItem.title = "Top"
+        navigationItem.title = "Top"
         let searchButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(didTappedSearchButton))
-        self.navigationItem.rightBarButtonItem = searchButton
+        navigationItem.rightBarButtonItem = searchButton
     }
 }
 // MARK: - BaseView Delegate
 extension TopViewController: TopBaseViewDelegate {
     func didTappedNextButton() {
         let vc = SecondViewController()
-        self.present(vc, animated: true, completion: nil)
+        present(vc, animated: true, completion: nil)
     }
     func didTappedHalfModalButton() {
     }

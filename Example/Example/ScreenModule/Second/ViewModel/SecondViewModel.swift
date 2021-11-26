@@ -14,10 +14,10 @@ class SecondViewModel: NSObject {
 // MARK: - UITableView DataSource Method
 extension SecondViewModel: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        self.sectionNumber
+        sectionNumber
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.rowNumber
+        rowNumber
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Common.tableViewCellIdentifier, for: indexPath)
