@@ -51,8 +51,8 @@ extension SearchBaseView {
         addSubview(self.searchBar)
         addSubview(self.tableView)
     }
+    /// AutoLayout設定
     private func setLayoutConstraint() {
-        /// AutoLayout設定
         NSLayoutConstraint.activate([
             // 検索バー
             searchBar.topAnchor.constraint(equalTo:  topAnchor, constant: 0),
