@@ -40,6 +40,13 @@ class FakeHalfModalBaseView: UIView {
         tempButton.translatesAutoresizingMaskIntoConstraints = false
         return tempButton
     }()
+    /// タイトル境界線
+    private lazy var boarderLineView: UIView = {
+        let tempView = UIView()
+        tempView.backgroundColor = .black
+        tempView.translatesAutoresizingMaskIntoConstraints = false
+        return tempView
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -73,6 +80,7 @@ extension FakeHalfModalBaseView {
         addSubview(contentView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(closeButton)
+        contentView.addSubview(boarderLineView)
     }
     /// Autolayout
     private func setLayoutConstraint() {
@@ -87,7 +95,12 @@ extension FakeHalfModalBaseView {
             titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
             closeButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
-            closeButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20)
+            closeButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            
+            boarderLineView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
+            boarderLineView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            boarderLineView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            boarderLineView.heightAnchor.constraint(equalToConstant: 0.2),
         ])
     }
 }
