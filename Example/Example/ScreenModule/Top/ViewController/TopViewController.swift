@@ -8,7 +8,7 @@
 import UIKit
 
 class TopViewController: UIViewController {
-    /// BaseView
+
     private var baseView = TopBaseView()
     
     // MARK: - Lifecycle

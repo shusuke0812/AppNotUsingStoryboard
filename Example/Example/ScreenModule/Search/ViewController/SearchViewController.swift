@@ -8,7 +8,7 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    /// BaseView
+
     private var baseView = SearchBaseView()
     
     // MARK: - Lifecycle

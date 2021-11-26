@@ -41,15 +41,18 @@ class SearchBaseView: UIView {
 
 // MARK: - Initialized
 extension SearchBaseView {
+    /// 基本設定
     private func configBasic() {
         backgroundColor = .white
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: Common.tableViewCellIdentifier)
     }
+    /// UIパーツの追加
     private func addSubViews() {
         addSubview(self.searchBar)
         addSubview(self.tableView)
     }
     private func setLayoutConstraint() {
+        /// AutoLayout設定
         NSLayoutConstraint.activate([
             // 検索バー
             searchBar.topAnchor.constraint(equalTo:  topAnchor, constant: 0),

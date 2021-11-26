@@ -13,7 +13,7 @@ protocol TopBaseViewDelegate: AnyObject {
 }
 
 class TopBaseView: UIView {
-    /// デリゲート
+
     weak var delegate: TopBaseViewDelegate?
     
     /// StackView

@@ -8,9 +8,8 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    /// BaseView
+
     private var baseView = SecondBaseView()
-    /// ViewModel
     private var viewModel = SecondViewModel()
 
     // MARK: - Lifecycle Method
@@ -20,7 +19,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDissmissKeyboard()
-        // デリゲート登録
+
         baseView.searchBar.delegate = self
         baseView.tableView.delegate = self
         baseView.tableView.dataSource = self.viewModel

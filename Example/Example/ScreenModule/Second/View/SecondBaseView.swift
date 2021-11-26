@@ -39,12 +39,12 @@ class SecondBaseView: UIView {
 }
 // MARK: - Initialized Basic Method
 extension SecondBaseView {
-    // 基本設定
+    /// 基本設定
     private func configuredBasic() {
         backgroundColor = .white
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: Common.tableViewCellIdentifier)
     }
-    // UIパーツの追加
+    /// UIパーツの追加
     private func addSubViews() {
         addSubview(self.searchBar)
         addSubview(self.tableView)
@@ -52,6 +52,7 @@ extension SecondBaseView {
 }
 // MARK: - Initialization SubView Method
 extension SecondBaseView {
+    /// AutoLayout設定
     private func setLayoutConstraint() {
         NSLayoutConstraint.activate([
             // 検索バー
