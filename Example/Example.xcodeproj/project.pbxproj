@@ -25,6 +25,7 @@
 		9C9CA4792636FC9900E1D80C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C9CA4772636FC9900E1D80C /* LaunchScreen.storyboard */; };
 		9C9CA4842636FC9900E1D80C /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9CA4832636FC9900E1D80C /* ExampleTests.swift */; };
 		9C9CA48F2636FC9900E1D80C /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9CA48E2636FC9900E1D80C /* ExampleUITests.swift */; };
+		9CB53B9C2751A80400AE195E /* FakeHalfModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB53B9B2751A80300AE195E /* FakeHalfModalViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		9C9CA48A2636FC9900E1D80C /* ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C9CA48E2636FC9900E1D80C /* ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITests.swift; sourceTree = "<group>"; };
 		9C9CA4902636FC9900E1D80C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CB53B9B2751A80300AE195E /* FakeHalfModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHalfModalViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 		9C7B2C9227510F6C00DE68CB /* HalfModal */ = {
 			isa = PBXGroup;
 			children = (
+				9CB53B9A2751A7EF00AE195E /* ViewModel */,
 				9C7B2C9327510F7800DE68CB /* View */,
 				9C7B2C9427510F7D00DE68CB /* ViewController */,
 			);
@@ -292,6 +295,14 @@
 				9C9CA4902636FC9900E1D80C /* Info.plist */,
 			);
 			path = ExampleUITests;
+			sourceTree = "<group>";
+		};
+		9CB53B9A2751A7EF00AE195E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9CB53B9B2751A80300AE195E /* FakeHalfModalViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C9536A9263EDAF400F0E350 /* SecondViewModel.swift in Sources */,
+				9CB53B9C2751A80400AE195E /* FakeHalfModalViewModel.swift in Sources */,
 				9C7B2C9627510FB600DE68CB /* FakeHalfModalBaseView.swift in Sources */,
 				9C7B2C9827510FD100DE68CB /* FakeHalfModalViewController.swift in Sources */,
 				9C814D6426DA822100791A5F /* SearchViewController.swift in Sources */,
