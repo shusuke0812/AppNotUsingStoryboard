@@ -79,9 +79,12 @@ class FakeHalfModalBaseView: UIView {
 extension FakeHalfModalBaseView {
     /// 基本設定
     private func configBasic() {
-        backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.0)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: Common.tableViewCellIdentifier)
         tableView.backgroundColor = .systemGroupedBackground
+        
+        contentView.layer.borderWidth = 0.1
+        contentView.layer.borderColor = UIColor.gray.cgColor
     }
     /// UIパーツの追加
     private func addSubViews() {
@@ -109,7 +112,7 @@ extension FakeHalfModalBaseView {
             boarderLineView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
             boarderLineView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             boarderLineView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            boarderLineView.heightAnchor.constraint(equalToConstant: 0.2),
+            boarderLineView.heightAnchor.constraint(equalToConstant: 0.1),
             
             tableView.topAnchor.constraint(equalTo: boarderLineView.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
