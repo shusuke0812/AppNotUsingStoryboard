@@ -54,6 +54,7 @@ class FakeHalfModalBaseView: UIView {
         let tableViewTemp = UITableView()
         tableViewTemp.register(UITableViewCell.self, forCellReuseIdentifier: Common.tableViewCellIdentifier)
         tableViewTemp.backgroundColor = .systemGroupedBackground
+        tableViewTemp.isScrollEnabled = false
         tableViewTemp.translatesAutoresizingMaskIntoConstraints = false
         return tableViewTemp
     }()
