@@ -40,7 +40,17 @@ extension FakeHalfModalViewModel: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Common.tableViewCellIdentifier, for: indexPath)
-        cell.textLabel?.text = sections[indexPath.section].rows[indexPath.row].rawValue
+        let section = sections[indexPath.section]
+        let sectionRow = section.rows[indexPath.row]
+        switch section {
+        case .select:
+            cell.textLabel?.text = sectionRow.rawValue + "を選択"
+            cell.accessoryType = .checkmark
+        case .edit:
+            cell.textLabel?.text = section.rows[indexPath.row].rawValue + "を編集"
+            cell.textLabel?.textColor = .red
+            cell.accessoryType = .none
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
