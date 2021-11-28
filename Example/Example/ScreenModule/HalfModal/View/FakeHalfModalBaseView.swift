@@ -21,6 +21,8 @@ class FakeHalfModalBaseView: UIView {
         tempView.backgroundColor = .white
         tempView.layer.masksToBounds = true
         tempView.layer.cornerRadius = 10
+        tempView.layer.borderWidth = 0.1
+        tempView.layer.borderColor = UIColor.gray.cgColor
         tempView.translatesAutoresizingMaskIntoConstraints = false
         return tempView
     }()
@@ -50,6 +52,8 @@ class FakeHalfModalBaseView: UIView {
     /// フィルタセクション
     private lazy var tableView: UITableView = {
         let tableViewTemp = UITableView()
+        tableViewTemp.register(UITableViewCell.self, forCellReuseIdentifier: Common.tableViewCellIdentifier)
+        tableViewTemp.backgroundColor = .systemGroupedBackground
         tableViewTemp.translatesAutoresizingMaskIntoConstraints = false
         return tableViewTemp
     }()
@@ -80,11 +84,6 @@ extension FakeHalfModalBaseView {
     /// 基本設定
     private func configBasic() {
         backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.0)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: Common.tableViewCellIdentifier)
-        tableView.backgroundColor = .systemGroupedBackground
-        
-        contentView.layer.borderWidth = 0.1
-        contentView.layer.borderColor = UIColor.gray.cgColor
     }
     /// UIパーツの追加
     private func addSubViews() {
