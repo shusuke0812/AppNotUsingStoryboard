@@ -51,7 +51,7 @@ class FakeHalfModalBaseView: UIView {
     }()
     /// フィルタセクション
     private lazy var tableView: UITableView = {
-        let tableViewTemp = UITableView()
+        let tableViewTemp = UITableView(frame: .zero, style: .grouped)
         tableViewTemp.register(UITableViewCell.self, forCellReuseIdentifier: Common.tableViewCellIdentifier)
         tableViewTemp.backgroundColor = .systemGroupedBackground
         tableViewTemp.isScrollEnabled = false
