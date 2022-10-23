@@ -21,7 +21,7 @@ extension SecondViewModel: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Common.tableViewCellIdentifier, for: indexPath)
-        cell.textLabel?.text = "test"
+        cell.textLabel?.text = "index=\(indexPath.row) test"
         return cell
     }
 }
