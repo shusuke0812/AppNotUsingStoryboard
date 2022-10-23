@@ -18,4 +18,8 @@ class SecondContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    func updateSelectedTitleLabel(_ text: String) {
+        baseView.updateSelectedTitleLabel(text)
+    }
 }

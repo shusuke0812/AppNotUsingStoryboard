@@ -42,4 +42,7 @@ class SecondContainerBaseView: UIView {
     }
     
     // MARK: - Update
+    func updateSelectedTitleLabel(_ text: String) {
+        selectedTitleLabel.text = text
+    }
 }

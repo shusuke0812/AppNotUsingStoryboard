@@ -73,4 +73,8 @@ extension SecondViewController: UISearchBarDelegate {
 
 // MARK: - TableView Delegate
 extension SecondViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedItem = viewModel.items[indexPath.row]
+        containerVC.updateSelectedTitleLabel(selectedItem)
+    }
 }
