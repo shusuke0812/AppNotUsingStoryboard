@@ -1,9 +1,9 @@
 # Storyboardを使用せずにコードでViewを作成するサンプルアプリ
 
 ## 開発環境
-- Xcode version 12.4
-- Swift version 5.0
-- pod version 1.9.3
+- Xcode version 13.3.1
+- Swift version 5.6
+- pod version 1.11.3
 - 開発ターゲット iOS 14.0
 
 ## 概要
