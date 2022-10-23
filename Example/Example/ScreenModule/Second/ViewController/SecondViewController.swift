@@ -58,6 +58,12 @@ class SecondViewController: UIViewController {
         
         containerVC.didMove(toParent: self)
     }
+    
+    private func removeContainerVC() {
+        containerVC.willMove(toParent: nil)
+        containerVC.view.removeFromSuperview()
+        containerVC.removeFromParent()
+    }
 }
 
 // MARK: - SearchBar Delegate
