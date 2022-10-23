@@ -42,6 +42,7 @@ extension TopViewController {
 // MARK: - BaseView Delegate
 extension TopViewController: TopBaseViewDelegate {
     func didTappedNextButton() {
+        print("DEBUG: \(#function)")
         let vc = SecondViewController()
         present(vc, animated: true, completion: nil)
     }
