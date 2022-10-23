@@ -12,7 +12,7 @@ class SecondContainerBaseView: UIView {
         let label = UILabel()
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 20, weight: .bold)
-        label.textColor = .systemRed
+        label.textColor = .white
         label.text = "-"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -29,7 +29,7 @@ class SecondContainerBaseView: UIView {
     // MARK: - Init
     
     private func initialize() {
-        backgroundColor = .white
+        backgroundColor = .systemRed
         
         addSubview(selectedTitleLabel)
         
