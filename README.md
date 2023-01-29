@@ -7,11 +7,14 @@
 - 開発ターゲット iOS 14.0
 
 ## 概要
-- 本アプリは [ios-engineer-codecheck](https://github.com/shusuke0812/ios-engineer-codecheck) を元にStoryboardを使わずにコードのみでViewを作成したアプリである（GitHubRepositorySearchディレクトリ）
-- UIKitを使用している
+- 本アプリはStoryboardを使わずにコードのみでViewを作成したアプリである
+- サンプルコード
+  - Exampleディレクトリ：`UIKit`を使用した例
+  - GitHubSearchディレクトリ：`SwiftUI`を使用した例
 
 ## UI概要
-- GitHubのリポジトリを検索できるUI
+
+### GitHubSearch UI
 
 | 検索前 | 検索後 | 詳細画面 |
 |:-----:|:-----:|:-----:|
