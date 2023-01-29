@@ -54,7 +54,9 @@ class TopBaseView: UIView {
         let buttonTemp = UIButton()
         buttonTemp.backgroundColor = .systemRed
         buttonTemp.setTitle("次に進む", for: .normal)
-        buttonTemp.addTarget(self, action: #selector(didTappedNextButton), for: .touchDown)
+        buttonTemp.addAction(.init() { [weak self] _ in
+            self?.delegate?.didTappedNextButton()
+        }, for: .touchDown)
         buttonTemp.clipsToBounds = true
         buttonTemp.layer.cornerRadius = 5
         buttonTemp.translatesAutoresizingMaskIntoConstraints = false
@@ -66,7 +68,9 @@ class TopBaseView: UIView {
         buttonTemp.backgroundColor = .systemGray
         buttonTemp.setTitle("ハーフモーダル", for: .normal)
         buttonTemp.setTitleColor(.white, for: .normal)
-        buttonTemp.addTarget(self, action: #selector(transitionHalfModal), for: .touchDown)
+        buttonTemp.addAction(.init() { [weak self] _ in
+            self?.delegate?.didTappedHalfModalButton()
+        }, for: .touchDown)
         buttonTemp.translatesAutoresizingMaskIntoConstraints = false
         return buttonTemp
     }()
@@ -86,13 +90,6 @@ class TopBaseView: UIView {
         super.init(coder: coder)
     }
     override func layoutSubviews() {
-    }
-    // MARK: - Action
-    @objc func didTappedNextButton(_ sender: UIButton) {
-        delegate?.didTappedNextButton()
-    }
-    @objc func transitionHalfModal(_ sender: UIButton) {
-        delegate?.didTappedHalfModalButton()
     }
 }
 // MARK: - Initialized Basic Method

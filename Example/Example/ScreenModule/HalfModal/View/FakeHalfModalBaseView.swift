@@ -38,7 +38,9 @@ class FakeHalfModalBaseView: UIView {
         let tempButton = UIButton()
         tempButton.setImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
         tempButton.tintColor = .lightGray
-        tempButton.addTarget(self, action: #selector(close(_:)), for: .touchDown)
+        tempButton.addAction(.init() { [weak self] _ in
+            self?.close()
+        }, for: .touchDown)
         tempButton.translatesAutoresizingMaskIntoConstraints = false
         return tempButton
     }()
@@ -75,7 +77,7 @@ class FakeHalfModalBaseView: UIView {
     }
     
     // MARK: - Action
-    @objc private func close(_ sender: UIButton) {
+    private func close() {
         delegate?.didTappedCloseButton()
     }
 }
