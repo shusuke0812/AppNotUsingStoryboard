@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import iOSEngineerCodeCheck
+@testable import GitHubSearch
 
-class iOSEngineerCodeCheckTests: XCTestCase {
+class GitHubSearchTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

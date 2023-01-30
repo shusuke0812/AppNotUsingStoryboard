@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'AppNotUsingStoryboard' do
+target 'GitHubSearch' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -14,12 +14,12 @@ target 'AppNotUsingStoryboard' do
   pod 'R.swift'
   pod 'LicensePlist'
 
-  target 'AppNotUsingStoryboardTests' do
+  target 'GitHubSearchTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'AppNotUsingStoryboardUITests' do
+  target 'GitHubSearchUITests' do
     # Pods for testing
   end
 
