@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BFD945DA244DC5E80012785A"
-               BuildableName = "AppNotUsingStoryboard.app"
-               BlueprintName = "AppNotUsingStoryboard"
-               ReferencedContainer = "container:AppNotUsingStoryboard.xcodeproj">
+               BuildableName = "GitHubSearch.app"
+               BlueprintName = "GitHubSearch"
+               ReferencedContainer = "container:GitHubSearch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BFD945DA244DC5E80012785A"
-            BuildableName = "AppNotUsingStoryboard.app"
-            BlueprintName = "AppNotUsingStoryboard"
-            ReferencedContainer = "container:AppNotUsingStoryboard.xcodeproj">
+            BuildableName = "GitHubSearch.app"
+            BlueprintName = "GitHubSearch"
+            ReferencedContainer = "container:GitHubSearch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BFD945DA244DC5E80012785A"
-            BuildableName = "AppNotUsingStoryboard.app"
-            BlueprintName = "AppNotUsingStoryboard"
-            ReferencedContainer = "container:AppNotUsingStoryboard.xcodeproj">
+            BuildableName = "GitHubSearch.app"
+            BlueprintName = "GitHubSearch"
+            ReferencedContainer = "container:GitHubSearch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
