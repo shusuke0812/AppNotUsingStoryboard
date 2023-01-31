@@ -49,7 +49,7 @@
 		9CD3710B2571F74D001759F8 /* GitHubRepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD371092571F74D001759F8 /* GitHubRepositoryCell.xib */; };
 		BF0A658D244F2A3B00280FA6 /* GitHubRepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A658C244F2A3B00280FA6 /* GitHubRepositoryDetailViewController.swift */; };
 		BFD945DF244DC5E80012785A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD945DE244DC5E80012785A /* AppDelegate.swift */; };
-		BFD945E1244DC5E80012785A /* SceneDelegate.swift.org in Sources */ = {isa = PBXBuildFile; fileRef = BFD945E0244DC5E80012785A /* SceneDelegate.swift.org */; };
+		BFD945E1244DC5E80012785A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD945E0244DC5E80012785A /* SceneDelegate.swift */; };
 		BFD945E3244DC5E80012785A /* GitHubRepositorySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD945E2244DC5E80012785A /* GitHubRepositorySearchViewController.swift */; };
 		BFD945E6244DC5E80012785A /* GitHubRepositorySearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD945E4244DC5E80012785A /* GitHubRepositorySearchViewController.storyboard */; };
 		BFD945E8244DC5EB0012785A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD945E7244DC5EB0012785A /* Assets.xcassets */; };
@@ -139,7 +139,7 @@
 		BFA29C497FDE9D5C8288C976 /* Pods-AppNotUsingStoryboard-AppNotUsingStoryboardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNotUsingStoryboard-AppNotUsingStoryboardUITests.release.xcconfig"; path = "Target Support Files/Pods-AppNotUsingStoryboard-AppNotUsingStoryboardUITests/Pods-AppNotUsingStoryboard-AppNotUsingStoryboardUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BFD945DB244DC5E80012785A /* GitHubSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD945DE244DC5E80012785A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFD945E0244DC5E80012785A /* SceneDelegate.swift.org */ = {isa = PBXFileReference; lastKnownFileType = text; path = SceneDelegate.swift.org; sourceTree = "<group>"; };
+		BFD945E0244DC5E80012785A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BFD945E2244DC5E80012785A /* GitHubRepositorySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositorySearchViewController.swift; sourceTree = "<group>"; };
 		BFD945E5244DC5E80012785A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GitHubRepositorySearchViewController.storyboard; sourceTree = "<group>"; };
 		BFD945E7244DC5EB0012785A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -377,7 +377,7 @@
 				BFD945E7244DC5EB0012785A /* Assets.xcassets */,
 				BFD945EC244DC5EB0012785A /* Info.plist */,
 				BFD945DE244DC5E80012785A /* AppDelegate.swift */,
-				BFD945E0244DC5E80012785A /* SceneDelegate.swift.org */,
+				BFD945E0244DC5E80012785A /* SceneDelegate.swift */,
 				9C8C222F25BABA0B00A4C5D1 /* Settings.bundle */,
 			);
 			path = GitHubSearch;
@@ -621,7 +621,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -726,7 +726,7 @@
 				9C67F56425C24A5A0031F233 /* GitHubLicenseRepository.swift in Sources */,
 				9CD371002571E28E001759F8 /* Common.swift in Sources */,
 				9CBF52C225C1482E00AD822B /* LicenseRequest.swift in Sources */,
-				BFD945E1244DC5E80012785A /* SceneDelegate.swift.org in Sources */,
+				BFD945E1244DC5E80012785A /* SceneDelegate.swift in Sources */,
 				9C9797E6261DC33A001950C1 /* Items.swift in Sources */,
 				9C9AD53225C961560036352A /* GitHubReadme.swift in Sources */,
 				9C88CFC225C28BBB001D4AB3 /* GitHubLicenseBaseView.swift in Sources */,
