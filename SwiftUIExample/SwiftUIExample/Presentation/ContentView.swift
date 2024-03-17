@@ -46,6 +46,7 @@ struct ContentView: View {
                         .padding(),
                     alignment: .bottom
                 )
+                .clipShape(.capsule)
         }
         .padding()
     }
