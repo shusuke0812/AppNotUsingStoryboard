@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var labelText = ""
+
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,6 +22,7 @@ struct ContentView: View {
                 .padding(.all, 10)
             Button(action: {
                 debugPrint("DEBUG: Tap button")
+                self.labelText = "Button Tapped"
             }, label: {
                 Text("Tap")
                     .font(.footnote)
@@ -27,6 +30,11 @@ struct ContentView: View {
                     .frame(width: 70, height: 30)
                     .border(.blue, width: 0.5)
             })
+            Text(labelText)
+                .font(.footnote)
+                .fontWeight(.thin)
+                .foregroundStyle(.red)
+                .padding(.all, 10)
         }
         .padding()
     }
