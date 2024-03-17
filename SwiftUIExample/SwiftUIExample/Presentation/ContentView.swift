@@ -12,15 +12,15 @@ struct ContentView: View {
     let viewModel = ContentViewModel()
     
     var body: some View {
-        VStack {
+        VStack(spacing: 10) {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundStyle(.blue)
-                .padding(.all, 10)
+            if viewModel.isShowHelloWorld {
+                title("Hello World")
+            } else {
+                title("Good Morning")
+            }
             Button(action: {
                 debugPrint("DEBUG: Tap button")
                 self.labelText = "Button Tapped"
@@ -36,7 +36,6 @@ struct ContentView: View {
                 .font(.footnote)
                 .fontWeight(.thin)
                 .foregroundStyle(.red)
-                .padding(.all, 10)
             Image("kiyomizu")
                 .overlay(
                     Text("Kiyomizzu")
@@ -49,6 +48,13 @@ struct ContentView: View {
                 .clipShape(.capsule)
         }
         .padding()
+    }
+    
+    private func title(_ value: String) -> Text {
+        Text(value)
+            .font(.largeTitle)
+            .fontWeight(.bold)
+            .foregroundStyle(.blue)
     }
 }
 

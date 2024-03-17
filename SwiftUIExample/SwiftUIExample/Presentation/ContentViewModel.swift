@@ -10,4 +10,7 @@ import Foundation
 class ContentViewModel {
     @UserDefault(key: "TAPPED", defaultValue: false)
     var isTapped: Bool
+    var isShowHelloWorld: Bool {
+        Bool.random()
+    }
 }
