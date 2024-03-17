@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State var labelText = ""
-
+    let viewModel = ContentViewModel()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -23,6 +24,7 @@ struct ContentView: View {
             Button(action: {
                 debugPrint("DEBUG: Tap button")
                 self.labelText = "Button Tapped"
+                viewModel.isTapped = true
             }, label: {
                 Text("Tap")
                     .font(.footnote)
