@@ -37,6 +37,15 @@ struct ContentView: View {
                 .fontWeight(.thin)
                 .foregroundStyle(.red)
                 .padding(.all, 10)
+            Image("kiyomizu")
+                .overlay(
+                    Text("Kiyomizzu")
+                        .font(.subheadline)
+                        .fontWeight(.heavy)
+                        .foregroundStyle(.white)
+                        .padding(),
+                    alignment: .bottom
+                )
         }
         .padding()
     }
